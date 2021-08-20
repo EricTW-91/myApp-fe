@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { FormGroup, FormControl, InputLabel, Input} from '@material-ui/core';
+import { FormGroup, FormControl, InputLabel, Input, Button, Breadcrumbs, Link} from '@material-ui/core';
+
+const handleLogin = () => {
+    alert('Login!')
+}
 
 const Login = () => {
     return (
@@ -13,10 +17,18 @@ const Login = () => {
                     <InputLabel htmlFor='password'>Password:</InputLabel>
                     <Input id='password' type='password'></Input>
                 </FormControl>
-                <FormControl>
-                    <Input id='submit' type='submit'>Login</Input>
-                </FormControl>
             </FormGroup>
+
+            <Breadcrumbs aria-label="breadcrumb">
+                <Link color="inherit" href="/forgot">
+                    Forgot password
+                </Link>
+                <Link color="inherit" href="/register">
+                    Register
+                </Link>
+            </Breadcrumbs>
+
+            <Button color='primary' onClick={ ()=>handleLogin() }>Login</Button>
         </>
     )
 }

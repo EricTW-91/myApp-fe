@@ -26,18 +26,12 @@ const Header = () => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
-                Logo
+                Board game
                 </Typography>
 
-                <Breadcrumbs aria-label="breadcrumb">
-                    <Link color="inherit" href="/login" onClick={handleClick}>
-                        Login
-                    </Link>
-                    <Link color="inherit" href="/register" onClick={handleClick}>
-                        Register
-                    </Link>
-                    {/* <Typography color="textPrimary">Breadcrumb</Typography> */}
-                </Breadcrumbs>
+                <Link color="inherit" href="/login" onClick={handleClick}>
+                    Login
+                </Link>
             </Toolbar>
         </AppBar>
     );
